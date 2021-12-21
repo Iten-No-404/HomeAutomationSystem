@@ -1,0 +1,93 @@
+vsim -gui work.homeSystem
+# vsim -gui work.homeSystem 
+# Start time: 10:43:13 on Dec 11,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.homesystem(arch1)
+add wave -position insertpoint  \
+sim:/homeSystem/sfd
+add wave -position insertpoint  \
+sim:/homeSystem/srd
+add wave -position insertpoint  \
+sim:/homeSystem/sw
+add wave -position insertpoint  \
+sim:/homeSystem/sfa
+add wave -unsigned -position insertpoint  \
+sim:/homeSystem/st
+add wave -position insertpoint  \
+sim:/homeSystem/clk
+add wave -position insertpoint  \
+sim:/homeSystem/rst
+add wave -position insertpoint  \
+sim:/homeSystem/state
+add wave -position insertpoint  \
+sim:/homeSystem/next_state
+add wave -position insertpoint  \
+sim:/homeSystem/fdoor
+add wave -position insertpoint  \
+sim:/homeSystem/rdoor
+add wave -position insertpoint  \
+sim:/homeSystem/winbuzz
+add wave -position insertpoint  \
+sim:/homeSystem/alarambuzz
+add wave -position insertpoint  \
+sim:/homeSystem/heater
+add wave -position insertpoint  \
+sim:/homeSystem/cooler
+add wave -position insertpoint  \
+sim:/homeSystem/display
+# Reseting the state to start properly
+force -freeze sim:/homeSystem/sfd 0 0
+force -freeze sim:/homeSystem/srd 0 0
+force -freeze sim:/homeSystem/sw 0 0
+force -freeze sim:/homeSystem/sfa 0 0
+force -freeze sim:/homeSystem/st 0111100 0
+force -freeze sim:/homeSystem/rst 1 0
+force -freeze sim:/homeSystem/clk 0 0, 1 {50 ps} -r 100
+run
+force -freeze sim:/homeSystem/rst 0 0
+# Case of Front Door open
+force -freeze sim:/homeSystem/sfd 1 0
+run
+force -freeze sim:/homeSystem/sfd 0 0
+# Case of Back Door open
+force -freeze sim:/homeSystem/srd 1 0
+run
+force -freeze sim:/homeSystem/srd 0 0
+# Case of Fire Alarm On
+force -freeze sim:/homeSystem/sfa 1 0
+run
+force -freeze sim:/homeSystem/sfa 0 0
+# Case of Window open
+force -freeze sim:/homeSystem/sw 1 0
+run
+force -freeze sim:/homeSystem/sw 0 0
+# Case of Cold Weather --> Use Heater (48 F)
+force -freeze sim:/homeSystem/st 0110000 0
+run
+# Case of Hot Weather --> Use Cooler (71 F)
+force -freeze sim:/homeSystem/st 1000111 0
+run
+force -freeze sim:/homeSystem/st 0111100 0
+# Case of multiple signals with the sfd
+force -freeze sim:/homeSystem/sfd 1 0
+force -freeze sim:/homeSystem/srd 1 0
+force -freeze sim:/homeSystem/sfa 1 0
+force -freeze sim:/homeSystem/sw 1 0
+run
+force -freeze sim:/homeSystem/sfd 0 0
+# Case of multiple signals with the srd
+run
+force -freeze sim:/homeSystem/srd 0 0
+# Case of multiple signals with the sfa
+force -freeze sim:/homeSystem/st 0110000 0
+run
+force -freeze sim:/homeSystem/sfa 0 0
+# Case of multiple signals with the sw
+force -freeze sim:/homeSystem/st 1000111 0
+run
+force -freeze sim:/homeSystem/sw 0 0
+force -freeze sim:/homeSystem/st 0111100 0
+run
