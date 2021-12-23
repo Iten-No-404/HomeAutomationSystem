@@ -1,0 +1,16 @@
+#--------------------------------------------------------------------
+#         date     : Tue Dec 21 14:35:47 EET 2021
+#         ppid/pid : 12130/12140
+#         hostname : localhost.localdomain
+#         arch/os  : x86_64/Linux-3.10.0-1160.49.1.el7.x86_64 
+#         install  : /home/vlsi/Installation/Oasys/Oasys-RTL-2019.2.R1
+#         currdir  : /home/vlsi/HomeAutomationSystem
+#         logfile  : /home/vlsi/HomeAutomationSystem/oasys.log.00
+#         tmpdir   : /tmp/oasys.12130/
+#--------------------------------------------------------------------
+# Starting Gui Interactive Session
+source /home/vlsi/HomeAutomationSystem/scripts/run.tcl
+#    source scripts/0_init_design.tcl
+#    source scripts/1_read_design.tcl
+#    source scripts/2_synthesize_optimize.tcl
+#    source scripts/3_export_design.tcl

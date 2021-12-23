@@ -2,7 +2,7 @@
  config_shell -echo true
 
 ###################Top Module Specification###########
-set top_module "homeSystem"
+set top_module "HAS2"
 set max_route_layer "5"
 
 #Set design file path variables
@@ -33,7 +33,7 @@ config_report timing -format "cell edge arrival delay arc_delay net_delay slew n
 
 set search_path "${demo_adder_rtl_dir}/"
 
-set rtl_list "${demo_adder_rtl_dir}/homesystem.vhd"
+set rtl_list "${demo_adder_rtl_dir}/HAS-V2.vhd"
 
 #set macro_libs
 set std_vlt_lib "$library_path/NangateOpenCellLibrary_typical.lib"

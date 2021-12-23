@@ -11,8 +11,8 @@
 
 set pad_load            10  
 set transition          0.1
-set io_clock_period     2.0
-set clock_period 	3
+set io_clock_period     1.0
+set clock_period 	1.5
 create_clock -name sysclk -period ${clock_period} [get_ports clk]
 create_clock -name vsysclk -period ${io_clock_period}
 
