@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -1414,25 +1415,26 @@ R9
 R10
 R11
 n@h@a_@x1
-Ehomesystem
-Z17 w1640046633
-Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Ehas2
+Z17 w1640284748
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z19 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z20 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z21 d/home/vlsi/HomeAutomationSystem
-Z22 8/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd
-Z23 F/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd
+Z20 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 23
+Z21 d/mnt/FC8006E78006A7EA/Users/tarek/Desktop/College/Year3/VLSI/Project/HomeAutomationSystem
+Z22 8/mnt/FC8006E78006A7EA/Users/tarek/Desktop/College/Year3/VLSI/Project/HomeAutomationSystem/rtl/v2/HAS-V2.vhd
+Z23 F/mnt/FC8006E78006A7EA/Users/tarek/Desktop/College/Year3/VLSI/Project/HomeAutomationSystem/rtl/v2/HAS-V2.vhd
 l0
-L8
-V<0bkVi^3a6U8BSSN[C8Md1
-!s100 dmNojXKR5fM7>k8k3Q9NG2
-Z24 OV;C;10.5b;63
+L5 1
+Vjk3f^J5a_3>bDD^UFISQI3
+!s100 ga?_TnLP9die7PW9?j0he0
+Z24 OV;C;2020.1;71
 32
-Z25 !s110 1640047111
+Z25 !s110 1640284760
 !i10b 1
-Z26 !s108 1640047111.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd|
-Z28 !s107 /home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd|
+Z26 !s108 1640284760.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/mnt/FC8006E78006A7EA/Users/tarek/Desktop/College/Year3/VLSI/Project/HomeAutomationSystem/rtl/v2/HAS-V2.vhd|
+Z28 !s107 /mnt/FC8006E78006A7EA/Users/tarek/Desktop/College/Year3/VLSI/Project/HomeAutomationSystem/rtl/v2/HAS-V2.vhd|
 !i113 1
 Z29 o-work work -2002 -explicit
 Z30 tExplicit 1 CvgOpt 0
@@ -1440,11 +1442,12 @@ Aarch1
 R18
 R19
 R20
-DEx4 work 10 homesystem 0 22 <0bkVi^3a6U8BSSN[C8Md1
-l31
-L25
-VTQMWT^mD>1^X>LbKTW1<b0
-!s100 >Y:7kfF`7CDW1lhBnAiX[0
+Z31 DEx4 work 4 has2 0 22 jk3f^J5a_3>bDD^UFISQI3
+!i122 23
+l39
+Z32 L27 80
+Viba]OYDbM2AXF;Rc7cg;R0
+!s100 ^Ac<N3FYI9Wb3efbBPn3I3
 R24
 32
 R25
@@ -1452,6 +1455,47 @@ R25
 R26
 R27
 R28
+!i113 1
+R29
+R30
+Ehomesystem
+Z33 w1640046633
+Z34 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R19
+Z35 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z36 d/home/vlsi/HomeAutomationSystem
+Z37 8/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd
+Z38 F/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd
+l0
+L8
+V<0bkVi^3a6U8BSSN[C8Md1
+!s100 dmNojXKR5fM7>k8k3Q9NG2
+Z39 OV;C;10.5b;63
+32
+Z40 !s110 1640047111
+!i10b 1
+Z41 !s108 1640047111.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd|
+Z43 !s107 /home/vlsi/HomeAutomationSystem/rtl/homesystem.vhd|
+!i113 1
+R29
+R30
+Aarch1
+R34
+R19
+R35
+DEx4 work 10 homesystem 0 22 <0bkVi^3a6U8BSSN[C8Md1
+l31
+L25
+VTQMWT^mD>1^X>LbKTW1<b0
+!s100 >Y:7kfF`7CDW1lhBnAiX[0
+R39
+32
+R40
+!i10b 1
+R41
+R42
+R43
 !i113 1
 R29
 R30
