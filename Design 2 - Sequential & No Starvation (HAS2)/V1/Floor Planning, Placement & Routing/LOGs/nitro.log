@@ -1,0 +1,18 @@
+#---------------------------------------------------------------------
+# start session at Mon Dec 13 21:48:53 2021
+# Exec path is /home/vlsi/Installation/Nitro/nitroPack-2019.1.R2a/nitro/arch/linux/x86_64/2.12/64/bin
+#---------------------------------------------------------------------
+--------------------------------------------------------------------------------
+|    Nitro-SoC version 2019.1.R2 1.68700.2.290 Fri Nov 29 21:06:00 PST 2019    | 
+| Running on localhost.localdomain 1core 3.8GBytes 2.3GHz 64bits mode pid 5426 | 
+|             Copyright (c) 2003-2019 Mentor Graphics Corporation              | 
+|                             All Rights Reserved                              | 
+|         THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION          | 
+|             WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION             | 
+|              OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.               | 
+--------------------------------------------------------------------------------
+
+Nitro-SoC> exit
+#---------------------------------------------------------------------
+# end session at Mon Dec 13 21:49:03 2021
+#---------------------------------------------------------------------
