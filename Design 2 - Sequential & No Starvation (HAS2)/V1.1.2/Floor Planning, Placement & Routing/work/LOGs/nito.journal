@@ -1,0 +1,274 @@
+#---------------------------------------------------------------------
+# start session at Mon Jan 3 11:19:02 2022
+# version 2019.1.R2 1.68700.2.290 Fri Nov 29 21:06:00 PST 2019 
+# Running on localhost.localdomain 1core 1.9GBytes 2.0GHz 64bits mode pid 9238 
+# Exec path is /home/vlsi/Installation/Nitro/nitroPack-2019.1.R2a/nitro/arch/linux/x86_64/2.12/64/bin
+#---------------------------------------------------------------------
+setup_nrf
+source flow_scripts/0_import.tcl
+start
+## trigger_gui -name main:activate_window -param design:view
+set_option -name toolbar:main:floorplan:location -value {0 0}
+set_option -name toolbar:main:layers:location -value {0 0}
+set_option -name toolbar:main:interactive_modes:location -value {0 77}
+set_option -name toolbar:main:windows:location -value {60 20}
+set_option -name toolbar:main:zoom:location -value {310 20}
+set_option -name toolbar:main:custom_editing:location -value {508 20}
+set_option -name toolbar:main:objects:location -value {735 20}
+set_option -name toolbar:main:cross_probe:location -value {412 48}
+create_pg_rings -partitions "HAS2" -nets "VDD" -window false -layers { metal8 metal8 } -widths 4000a -step 8000a -offset { 1400a 1400a 1400a 1400a } -keep_pattern all -bridge_pattern single -ignore_blockages { placement } -measure_from edge -corner_style concentric -insert_vias true -location auto 
+create_pg_rings -partitions "HAS2" -nets "VSS" -window false -layers { metal7 metal7 } -widths 4000a -step 8000a -offset { 9400a 9400a 9400a 9400a } -keep_pattern all -bridge_pattern single -ignore_blockages { placement } -measure_from edge -corner_style concentric -insert_vias true -location auto 
+create_pg_stripes -partitions "HAS2" -nets "VDD" -window false -layer metal8 -widths 4000a -step 8000a -direction vertical -offset { 17400a 17400a } -margin { 1400a 1400a } -measure_from center_line -keep_pattern false -ignore_blockages { placement } 
+create_pg_stripes -partitions "HAS2" -nets "VSS" -window false -layer metal7 -widths 4000a -step 8000a -direction horizontal -offset { 17400a 17400a } -margin { 9400a 9400a } -measure_from center_line -keep_pattern false -ignore_blockages { placement } 
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value false
+select_objects -objects [get_area_objects -type cell -xl_area 20000a -yb_area 90000a -xr_area 52300a -yt_area 104000a -filter {@name == curr_state_reg[2] && @xorigin == 20000 && @yorigin == 90000}] -keep true
+clear_selection
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value false
+## trigger_gui -name design:check_design
+set_option -name window:design:check_design:state -value visible
+set_option -name window:design:check_design:size -value {600 300}
+trigger_gui -name main:view_errors
+set_option -name window:main:errors:state -value visible
+set_option -name window:main:errors:location -value {40 85}
+set_option -name window:main:errors:size -value {757 600}
+set_option -name window:main:errors:state -value hidden
+set_option -name window:design:check_design:state -value hidden
+source flow_scripts/3_route.tcl
+# get_config -name process -param node
+# config_lib_vias -use_generated true -create true -select true -use_asymmetrical true -use_4cut true
+# config_shell -echo false
+# config_shell -echo false
+# config_timing -disable_clock_gating_checks false
+# set_crpr_spec -method graph_based
+# config_flows -preserve_rcd false
+# config_shell -echo false
+# source scr/config.tcl
+# config_timing -rc_degrade_min_slew_when_rd_less_than_rnet false
+# config_timing -disable_recovery_removal false
+# config_timing -enable_exception_proxy true
+# config_timing -disable_time_borrow false
+# config_timing -disable_annotation_factor_calc true
+# config_timing -enable_clock_propagation_through_three_state_enable_pins false
+# config_timing -disable_internal_inout_cell_paths true
+# config_timing -enable_cond_arcs_with_default true 
+# config_timing -enable_default_for_cond_arcs true
+# config_timing -enable_setup_independent_hold_checks true
+# config_timing -enable_ideal_clock_data_tags true
+# config_timing -enable_clock_gating_propagate true
+# config_timing -disable_seq_case_analysis true
+# config_timing -early_launch_at_borrowing_latches false
+# config_timing -enable_preset_clear_arcs false
+# config_timing -enable_non_unate_clock_paths true
+# config_timing -pt_min_max_compatibility on_chip_variation
+# config_timing -enable_non_unate_clock_paths true
+# config_timing -disable_sequential_generation_of_waveform_preserving_clocks false
+# config_timing -capacitance_violation_threshold 0
+# config_timing -disable_clock_gating_checks false
+# config_timing -enable_default_input_delay false
+# config_extraction -gr_short_route_gcell_span 3
+# config_extraction -search_distance_multiple 15
+# config_extraction -use_thickness_variation false
+# config_extraction -use_thickness_variation_for_cap false
+# config_extraction -use_thickness_variation_for_res true
+# config_extraction -coupling_abs_threshold 0.1f
+# config_extraction -coupling_rel_threshold 1.0
+# ta_debug -cc_ratio 0
+# config_route_timing -name dvia_mode -value dfm
+# config_place_detail -name follow_drc_for
+# source nrf_customization.tcl
+# config_extraction -use_thickness_variation false
+# config_extraction -use_thickness_variation_for_cap false
+# config_extraction -use_thickness_variation_for_res true
+# set_crpr_spec -crpr_threshold 5p
+# set_crpr_spec -method graph_based
+# set_crpr_spec -transition same_transition
+# fk_msg Max Length Constraint
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name verbose_level
+# set_max_length -length_threshold 1000u
+# report_max_length
+# fk_msg Max Length Set to 10000000
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name verbose_level
+# fk_msg Running RRT with Interleave Optimization
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name verbose_level
+# run_route_timing -mode interleave_opt -cpus 2 -messages verbose
+# help run_route_timing -return
+# print_table -title Start run_route_timing flow -column_names Argument Value -values cpus 2 messages verbose timing_mode si preserve_clocks auto save_db_stages {} stop_after false start_from false resume false skip_stages {} run_stages {} mode interleave_opt trial false dump_qor_stages {} user_params {}
+# fk_msg Setting up run_route_timing flow ...
+
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name verbose_level
+# config_messages -message_id UI24 -max_messages 0
+# config_messages -message_id UI24 -max_log_messages 0
+# config_messages -message_id UI34 -max_messages 0
+# config_messages -message_id UI34 -max_log_messages 0
+# config_messages -message_id UI54 -max_messages 0
+# config_messages -message_id UI54 -max_log_messages 0
+# config_messages -message_id UI705 -max_messages 0
+# config_messages -message_id UI705 -max_log_messages 0
+# config_messages -message_id UI156 -max_messages 0
+# config_messages -message_id UI156 -max_log_messages 0
+# config_messages -message_id config1 -max_messages 0
+# config_messages -message_id config1 -max_log_messages 0
+# config_messages -message_id config3 -max_messages 0
+# config_messages -message_id config3 -max_log_messages 0
+# config_messages -message_id config5 -max_messages 0
+# config_messages -message_id config5 -max_log_messages 0
+# config_messages -message_id CSDB57 -max_messages 0
+# config_messages -message_id CSDB57 -max_log_messages 0
+# config_messages -message_id CSDB87 -max_messages 0
+# config_messages -message_id CSDB87 -max_log_messages 0
+# config_messages -message_id TA_CMDS1618 -max_messages 0
+# config_messages -message_id TA_CMDS1618 -max_log_messages 0
+# config_messages -message_id TA_CMDS1619 -max_messages 0
+# config_messages -message_id TA_CMDS1619 -max_log_messages 0
+# config_messages -message_id TA_CMDS7412 -max_messages 0
+# config_messages -message_id TA_CMDS7412 -max_log_messages 0
+# config_messages -message_id SDB43 -max_messages 0
+# config_messages -message_id SDB43 -max_log_messages 0
+# config_messages -message_id CSDB45 -max_messages 0
+# config_messages -message_id CSDB45 -max_log_messages 0
+# fk_msg 'design' variable does not exist, using 'top_partition' as design name
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name verbose_level
+# get_top_partition
+# create_property -name tdro_last_stage -object_type root -data_type string -storage sparse -persistent true -init_value null
+# create_property -name follow_gr -object_type net -data_type integer -storage sparse -persistent true -init_value 0
+# create_property -name preserve_layer -object_type net -data_type integer -storage sparse -persistent true -init_value 0
+# create_property -name preserve_channel -object_type net -data_type integer -storage sparse -persistent true -init_value 0
+# fk_msg -set_prompt RRT
+# new_config_flow -name flow_msg_prompt -quiet
+# new_config_flow -name flow_msg_prompt -value RRT -descr Flow prefix - will appear in all messages printed by flow_msg -quiet
+# config_shell -level _d%ve_
+# fk_msg -set_verbosity_filter debug
+# new_config_flow -name verbose_level
+# new_config_flow -name verbose_level -value debug -quiet
+# config_shell -echo false
+# config_shell -ignore_errors false
+# config_application -cpus 1
+# config_timing -cpus 2
+# config_default_value -command route_global -argument check -value  technology libraries routing 
+# config_default_value -command route_global -argument messages -value normal
+# config_default_value -command route_track -argument check -value  technology libraries routing 
+# config_default_value -command route_track -argument messages -value normal
+# config_default_value -command route_final -argument check -value  technology libraries routing 
+# config_default_value -command route_final -argument messages -value normal
+# config_default_value -command route_si_repair -argument check -value  
+# config_default_value -command route_si_repair -argument messages -value normal
+# config_route_final -opt_strict_drc false
+# write_db -data design -file dbs/route.db
+# save_db -directory dbs/route.db -overwrite true -data design -cpus 4 -description 
+# config_shell -echo false
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer1:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer3:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer5:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer7:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer9:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer11:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer13:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer15:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer17:final_route:wire:visible -value true
+set_option -name view:design:scheme0:layer19:final_route:wire:visible -value true
+trigger_gui -name main:view_errors
+set_option -name window:main:errors:state -value visible
+set_option -name window:main:errors:state -value hidden
+## trigger_gui -name design:check_design
+set_option -name window:design:check_design:state -value visible
+trigger_gui -name main:view_errors
+set_option -name window:main:errors:state -value visible
+set_option -name window:main:errors:state -value hidden
+set_option -name window:design:check_design:state -value hidden
+set_option -name window:main:message_area:state -value hidden
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value true
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value true
+set_option -name window:main:view_options_panel:state -value hidden
+set_option -name window:main:interactive_modes:state -value hidden
+set_option -name window:hierarchy:explorer:state -value hidden
+set_option -name view:design:scheme0:layer1:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer3:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer5:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer7:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer9:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer11:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer13:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer15:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer17:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer19:pre_route:wire:visible -value false
+set_option -name view:design:scheme0:layer1:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer3:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer5:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer7:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer9:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer11:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer13:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer15:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer17:final_route:wire:visible -value false
+set_option -name view:design:scheme0:layer19:final_route:wire:visible -value false

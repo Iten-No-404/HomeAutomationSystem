@@ -1,0 +1,21 @@
+#---------------------------------------------------------------------
+# start session at Sun Jan 2 23:00:56 2022
+# version 2019.1.R2 1.68700.2.290 Fri Nov 29 21:06:00 PST 2019 
+# Running on localhost.localdomain 1core 1.9GBytes 2.0GHz 64bits mode pid 4760 
+# Exec path is /home/vlsi/Installation/Nitro/nitroPack-2019.1.R2a/nitro/arch/linux/x86_64/2.12/64/bin
+#---------------------------------------------------------------------
+setup_nrf
+#---------------------------------------------------------------------
+# end session at Sun Jan 2 23:01:39 2022
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+# start session at Sun Jan 2 23:28:13 2022
+# version 2019.1.R2 1.68700.2.290 Fri Nov 29 21:06:00 PST 2019 
+# Running on localhost.localdomain 1core 1.9GBytes 2.0GHz 64bits mode pid 10911 
+# Exec path is /home/vlsi/Installation/Nitro/nitroPack-2019.1.R2a/nitro/arch/linux/x86_64/2.12/64/bin
+#---------------------------------------------------------------------
+setup_nrf
+source flow_scripts/0_import.tcl
+#---------------------------------------------------------------------
+# end session at Sun Jan 2 23:29:11 2022
+#---------------------------------------------------------------------
