@@ -1,4 +1,3 @@
-
 add wave -position insertpoint sim:/HAS2/clk
 add wave -position insertpoint sim:/HAS2/rst
 add wave -position insertpoint sim:/HAS2/curr_state
