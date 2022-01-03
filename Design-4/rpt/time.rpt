@@ -1,0 +1,30 @@
+Report for group default
+Report for group I2R
+Report for group I2O
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Startpoint: st[3]
+    (Clocked by rtDefaultClock R)
+Endpoint: display[1]
+    (Clocked by vsysclk R)
+Path Group: I2O
+Data required time: 42000.0
+    (Clock shift: 60000.0, minus Uncertainty: 0.0, plus Latency 0.0, minus Out delay: 18000.0)
+Data arrival time: 737.0
+Slack: 41263.0
+Logic depth: 7
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     Arrival               Arc      Net               Net    Total   fan-                                   
+Path                     Module/Cell           Edge     Time    Delay    Delay    Delay     Slew     Load     Load    out     Location Power Domain      (V)
+                                                        (ps)     (ps)     (ps)     (ps)     (ps)     (ff)     (ff)    (#)      (um,um)                      
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+st[3]                    {set_input_delay}        f    700.0    700.0    700.0                        4.5      8.8      2    35,    0                       
+i_0_0_24/A3->ZN          OR3_X4_LVT              ff    716.5     16.5     16.1      0.4    100.0      0.7      4.5      1    35,   35  /PD_TOP        (0.95)
+i_0_0_23/B2->ZN          OAI21_X4_LVT            fr    723.9      7.4      7.4      0.0      1.3      2.1     33.7      3    35,   35  /PD_TOP        (0.95)
+i_0_0_22/A->ZN           INV_X8_LVT              rf    724.9      1.0      1.0      0.0      5.5      0.6      4.5      1    35,   35  /PD_TOP        (0.95)
+i_0_0_21/A2->ZN          NOR2_X4_LVT             fr    728.1      3.2      3.2      0.0      0.3      1.3      8.0      2    35,   35  /PD_TOP        (0.95)
+i_0_0_15/A1->ZN          NAND2_X4_LVT            rf    729.9      1.8      1.8      0.0      2.0      2.5      8.6      4    35,   35  /PD_TOP        (0.95)
+i_0_0_12/B1->ZN          OAI21_X4_LVT            fr    735.4      5.5      5.5      0.0      1.1      0.6     24.4      1    35,   35  /PD_TOP        (0.95)
+i_0_0_11/A->ZN           INV_X8_LVT              rf    736.6      1.2      1.2      0.0      4.4      4.6     14.6      1    35,   35  /PD_TOP        (0.95)
+display[1]                                        f    737.0      0.4               0.4      0.5                              0,   34                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Report for group R2O
