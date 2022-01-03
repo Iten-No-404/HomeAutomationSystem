@@ -1,0 +1,46 @@
+Report for group default
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Startpoint: curr_state_reg[0]/Q
+    (Clocked by sysclk R)
+Endpoint: curr_state_reg[2]/D
+    (Clocked by sysclk R)
+Path Group: default
+Data required time: 1461.2
+    (Clock shift: 1500.0, minus Uncertainty: 0.0, plus Latency 0.0, minus Setup time: 38.8)
+Data arrival time: 242.7
+Slack: 1218.5
+Logic depth: 2
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     Arrival               Arc      Net               Net    Total   fan-                                   
+Path                     Module/Cell           Edge     Time    Delay    Delay    Delay     Slew     Load     Load    out     Location Power Domain      (V)
+                                                        (ps)     (ps)     (ps)     (ps)     (ps)     (ff)     (ff)    (#)      (um,um)                      
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk                      {create_clock}           r      0.0      0.0      0.0                        0.0      0.0      3     0,   34                       
+curr_state_reg[0]/CK->Q  DFF_X1*                 rr    146.1    146.1    146.1      0.0      0.0      4.7     31.0      7    35,   35  /PD_TOP        (1.10)
+i_0_0_30/A2->ZN          NOR2_X4*                rf    169.9     23.8     23.7      0.1     15.3      2.0     32.2      3    35,   35  /PD_TOP        (1.10)
+i_0_0_22/A4->ZN          NOR4_X2                 fr    242.7     72.8     72.8      0.0     15.3      0.8      1.9      1    35,   35  /PD_TOP        (1.10)
+curr_state_reg[2]/D      DFF_X1                   r    242.7      0.0               0.0     35.5                             35,   35  /PD_TOP        (1.10)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Report for group I2R
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Startpoint: rst
+    (Clocked by rtDefaultClock R)
+Endpoint: curr_state_reg[1]/D
+    (Clocked by sysclk R)
+Path Group: I2R
+Data required time: 1461.4
+    (Clock shift: 1500.0, minus Uncertainty: 0.0, plus Latency 0.0, minus Setup time: 38.6)
+Data arrival time: 790.5
+Slack: 670.9
+Logic depth: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     Arrival               Arc      Net               Net    Total   fan-                                   
+Path                     Module/Cell           Edge     Time    Delay    Delay    Delay     Slew     Load     Load    out     Location Power Domain      (V)
+                                                        (ps)     (ps)     (ps)     (ps)     (ps)     (ff)     (ff)    (#)      (um,um)                      
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+rst                      {set_input_delay}        f    700.0    700.0    700.0                        6.0     16.8      3     0,   35                       
+i_0_0_20/A->ZN           AOI211_X2               fr    790.5     90.5     90.1      0.4    100.0      0.8      1.9      1    35,   35  /PD_TOP        (1.10)
+curr_state_reg[1]/D      DFF_X1                   r    790.5      0.0               0.0     34.9                             35,   35  /PD_TOP        (1.10)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Report for group I2O
+Report for group R2O
